@@ -1,49 +1,40 @@
 #!/usr/bin/env python
-'''
-setup.py - Setup script to install the ColorPy package.
 
-To install the ColorPy package:
-From the directory in which the ColorPy distribution was unpacked, run:
+import setuptools
 
-python setup.py install
+with open('README.rst') as readme_file:
+    readme = readme_file.read()
 
-You should now be able to say 'import colorpy' in your programs and use the package.
-
-Creating the distribution:
-
-python setup.py sdist --formats=zip
-python setup.py sdist --formats=gztar
-python setup.py bdist_wininst
-'''
-
-from distutils.core import setup
-
-data_files = [
-    'README.rst',
-    'COPYING.txt',
-    'COPYING.LESSER.txt',
-    'license.txt',
-    'ColorPy.html',
+requirements = [
+    "numpy"
 ]
 
-long_description = '''
-ColorPy is a Python package to convert physical descriptions of light -
-    spectra of light intensity vs. wavelength - into RGB colors that can
-    be drawn on a computer screen.
-    It provides a nice set of attractive plots that you can make of such
-    spectra, and some other color related functions as well.
-'''
+setup_requirements = [ ]
 
-setup (
+test_requirements = [
+    "pytest"
+]
+
+setuptools.setup(
+    author="Mark Kness",
+    classifiers=[
+        # Full list: https://pypi.python.org/pypi?%3Aaction=list_classifiers
+        'Development Status :: 2 - Pre-Alpha',
+    ],
+    install_requires=requirements,
+    license="MIT license",
+    long_description=readme,
+    include_package_data=True,
+    keywords='',
     name='colorpy',
+    packages=setuptools.find_packages(
+        include=[
+            'colorpy',
+        ]
+    ),
+    setup_requires=setup_requirements,
+    test_suite='tests',
+    tests_require=test_requirements,
+    url='',
     version='0.1.1',
-    description='Color calculations with physical descriptions of light spectra',
-    long_description=long_description,
-    author='Mark Kness',
-    author_email='mkness@alumni.utexas.net',
-    url='http://markkness.net/colorpy/',
-    license='GNU Lesser GPL Version 3',
-    package_dir={'colorpy': '.'},
-    packages=['colorpy'],
-    package_data={'colorpy': data_files},
 )
