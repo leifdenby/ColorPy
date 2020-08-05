@@ -26,7 +26,7 @@ along with ColorPy.  If not, see <http://www.gnu.org/licenses/>.
 
 import random
 
-from . import rayleigh, illuminants
+from colorpy import rayleigh, illuminants
 
 def test ():
     '''Mainly call some functions.'''

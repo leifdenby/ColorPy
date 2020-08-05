@@ -26,7 +26,7 @@ along with ColorPy.  If not, see <http://www.gnu.org/licenses/>.
 
 import random
 
-from . import ciexyz
+from colorpy import ciexyz
 
 def test (verbose=0):
     '''Test the CIE XYZ conversions.  Mainly call some functions.'''

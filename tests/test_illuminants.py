@@ -24,7 +24,7 @@ along with ColorPy.  If not, see <http://www.gnu.org/licenses/>.
 '''
 
 
-from . import illuminants
+from colorpy import illuminants
 
 def test (verbose=0):
     '''Mainly call some functions.'''

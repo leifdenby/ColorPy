@@ -26,7 +26,7 @@ along with ColorPy.  If not, see <http://www.gnu.org/licenses/>.
 
 import random
 
-from . import illuminants, thinfilm
+from colorpy import illuminants, thinfilm
 
 def test ():
     '''Module test.  Mainly call some functions.'''
