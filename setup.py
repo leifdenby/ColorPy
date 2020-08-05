@@ -6,7 +6,7 @@ with open('README.rst') as readme_file:
     readme = readme_file.read()
 
 requirements = [
-    "numpy"
+    "numpy", "matplotlib"
 ]
 
 setup_requirements = [ ]
